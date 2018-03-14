@@ -47,13 +47,13 @@ window.BabylonView = function() {
         engine = new BABYLON.Engine(canvas, true);
         engine.enableOfflineSupport = false;
         scene = new BABYLON.Scene(engine);
-        scene.useRightHandedSystem = true; // This is needed for correct glTF normal maps.
+        //scene.useRightHandedSystem = true; // TODO: Test if this is still needed for correct glTF normal maps.
 
         var defaultBabylonReflection = document.getElementById('defaultBabylonReflection').textContent;
         var rootPath = document.getElementById('gltfRootPath').textContent;
         var gltfContent = document.getElementById('gltf').textContent;
 
-        BABYLON.GLTFFileLoader.IncrementalLoading = false;
+        //BABYLON.GLTFFileLoader.IncrementalLoading = false;  // TODO: No longer needed?
         BABYLON.SceneLoader.Append(rootPath, 'data:' + gltfContent, scene, function() {
             scene.createDefaultCameraOrLight(true);
             scene.activeCamera.attachControl(canvas);

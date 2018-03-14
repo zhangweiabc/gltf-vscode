@@ -111,8 +111,7 @@ export class GltfPreviewDocumentContentProvider implements TextDocumentContentPr
 
         const scripts = [
             'engines/Cesium/Cesium.js',
-            'node_modules/babylonjs/dist/preview release/babylon.js',
-            'node_modules/babylonjs/dist/preview release/loaders/babylonjs.loaders.js',
+            'node_modules/babylonjs/babylon.js',  // Use babylon.max.js for debugging.
             'engines/Three/three.min.js',
             'engines/Three/GLTFLoader.js',
             'engines/Three/OrbitControls.js',
